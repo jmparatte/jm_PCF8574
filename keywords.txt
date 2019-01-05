@@ -1,0 +1,38 @@
+#######################################
+# Syntax Coloring Map for jm_PCF8574 Library
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+jm_PCF8574	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+i2c_address	KEYWORD2
+connected	KEYWORD2
+
+begin	KEYWORD2
+end	KEYWORD2
+
+read	KEYWORD2
+write	KEYWORD2
+
+pinMask	KEYWORD2
+pinMode	KEYWORD2
+digitalRead	KEYWORD2
+digitalWrite	KEYWORD2
+
+wait	KEYWORD2
+
+obj_pinMode	KEYWORD2
+obj_digitalRead	KEYWORD2
+obj_digitalWrite	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
