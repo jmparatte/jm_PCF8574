@@ -5,6 +5,8 @@
 // PCF8574 - PCF8574A
 // Remote 8-bit I/O expander for I2C-bus with interrupt
 
+// http://www.ti.com/lit/ml/scyb031/scyb031.pdf
+// http://www.ti.com/lit/ds/symlink/pcf8574.pdf
 // https://www.nxp.com/docs/en/data-sheet/PCF8574_PCF8574A.pdf
 
 // PCF8574 I2C address: 0x20..0x27
@@ -29,6 +31,7 @@ protected:
 
 public:
 
+	jm_PCF8574();
 	jm_PCF8574(uint8_t i2c_address);
 	operator bool();
 
@@ -36,6 +39,7 @@ public:
 	bool connected();
 
 	bool begin();
+	bool begin(uint8_t i2c_address);
 	void end();
 
 	int read();

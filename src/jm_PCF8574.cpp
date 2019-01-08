@@ -7,6 +7,14 @@
 
 //------------------------------------------------------------------------------
 
+jm_PCF8574::jm_PCF8574() :
+	_i2c_address(0x00),			// undefined device I2C address
+	_connected(false),			// set device not connected (disconnected)
+	_io_mask(0x00),				// set digital I/O mask P0-P7 as INPUT
+	_io_data(0xFF)				// set digital I/O data P0-P7 as INPUT
+{
+}
+
 jm_PCF8574::jm_PCF8574(uint8_t i2c_address) :
 	_i2c_address(i2c_address),	// set device I2C address
 	_connected(false),			// set device not connected (disconnected)
@@ -36,24 +44,27 @@ bool jm_PCF8574::connected()
 
 bool jm_PCF8574::begin() // return OK
 {
-	if (_connected) return true;
+	if (_connected) return true; // allready connected ? OK
 
-	Wire.end();
-
-	Wire.begin();
+	if (_i2c_address == 0x00) return false; // I2C address not set ? !OK
 
 	_connected = true;
 
 	// check access to device...
 
-	int result;
-
-	Wire.beginTransmission(_i2c_address);
-	result = Wire.endTransmission();
-
-	_connected = (result == 0);
+	Wire.beginTransmission(_i2c_address); // check access device
+	_connected = (Wire.endTransmission() == (uint8_t) 0); // I2C device acknowledge ? OK
 
 	return _connected;
+}
+
+bool jm_PCF8574::begin(uint8_t i2c_address) // return OK
+{
+	if (_connected && _i2c_address != i2c_address) return false; // allready connected on another address ? !OK
+
+	_i2c_address = i2c_address;
+
+	return begin();
 }
 
 void jm_PCF8574::end()
