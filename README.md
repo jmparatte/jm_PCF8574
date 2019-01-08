@@ -15,7 +15,7 @@
 
 ##### Application example
 
-​	The LCM2004A LCD module (HD44780U device) interfaced for I2C with a PCF8574.
+- The LCM2004A LCD module (HD44780U device) interfaced for I2C with a PCF8574.
 
 ### Example
 
