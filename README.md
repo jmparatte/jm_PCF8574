@@ -9,9 +9,9 @@
 
 ##### Device datasheet
 
-​	http://www.ti.com/lit/ml/scyb031/scyb031.pdf
-​	http://www.ti.com/lit/ds/symlink/pcf8574.pdf
-​	https://www.nxp.com/docs/en/data-sheet/PCF8574_PCF8574A.pdf
+- http://www.ti.com/lit/ml/scyb031/scyb031.pdf
+- http://www.ti.com/lit/ds/symlink/pcf8574.pdf
+- https://www.nxp.com/docs/en/data-sheet/PCF8574_PCF8574A.pdf
 
 ##### Application example
 
