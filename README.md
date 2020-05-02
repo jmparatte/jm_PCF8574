@@ -1,6 +1,6 @@
 # jm_PCF8574 Arduino Library
 
-2020-05-02: v1.0.2 - README.md updated. `write(data, quantity)` method updated.  
+2020-05-02: v1.0.4 - README.md updated. `write(data, quantity)` method updated.  
 2019-01-08: v1.0.1 - Checked for ESP32.  
 2019-01-05: v1.0.0 - Initial commit.
 
@@ -117,11 +117,11 @@ These methods reproduce the behaviors of Arduino digital pins. Pins are numbered
 
 - Blinking backlight of a LCD module.
 
-This example blinks the backlight of a LCM2004A I2C LCD module.
-The LCM2004A module is commonly interfaced for I2C with a PCF8574A or optionaly a PCF8574.
-The default I2C address of the module is commonly 0x3F or optionaly 0x27. 
-The LCD display is driven by a Hitachi HD447800.
-Common color of display is blue or optionaly yellow.
+This example blinks the backlight of a LCM2004A I2C LCD module.  
+The LCM2004A module is commonly interfaced for I2C with a PCF8574A or optionaly a PCF8574.  
+The default I2C address of the module is commonly 0x3F or optionaly 0x27.  
+The LCD display is driven by a Hitachi HD447800.  
+Common color of display is blue or optionaly yellow.  
 Common size is 20 columns by 4 rows.
 
 ##### LCM2004A models
