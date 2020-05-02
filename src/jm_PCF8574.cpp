@@ -97,12 +97,19 @@ size_t jm_PCF8574::write(uint8_t value)
 size_t jm_PCF8574::write(const uint8_t *data, size_t quantity)
 {
 	if (!_connected) return 0;
-
+#if 0 // v1.0.2
 	for (size_t i=0; i<quantity; i++) {
 		if (write(data[i]) != 1) {_connected = false; return i;}
 	}
 
 	return quantity;
+#else
+	Wire.beginTransmission(_i2c_address);
+	if (Wire.write(data, quantity) != quantity) {_connected = false; return 0;}
+	if (Wire.endTransmission(true) != (uint8_t) 0) {_connected = false; return 0;}
+
+	return quantity;
+#endif
 }
 
 // ---------------------------------------------------------------------------
