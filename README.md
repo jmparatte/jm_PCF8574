@@ -1,8 +1,8 @@
 # jm_PCF8574 Arduino Library
 
-2020-05-02: v1.0.2 - README.md updated. `write(data, quantity)` method updated.
-2019-01-08: v1.0.1 - Checked for ESP32.
-2019-01-05: v1.0.0 - Initial commit.
+2020-05-02: v1.0.2 - README.md updated. `write(data, quantity)` method updated. 
+2019-01-08: v1.0.1 - Checked for ESP32. 
+2019-01-05: v1.0.0 - Initial commit. 
 
 
 
