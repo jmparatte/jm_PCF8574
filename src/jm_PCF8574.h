@@ -40,7 +40,7 @@ public:
 
 	bool begin();
 	bool begin(uint8_t i2c_address);
-	void end();
+	bool end();
 
 	int read();
 	size_t write(uint8_t value);
@@ -52,7 +52,7 @@ public:
 	int digitalRead(uint8_t pin);
 	void digitalWrite(uint8_t pin, uint8_t value);
 
-	void wait(uint16_t us);
+	bool wait(uint16_t us);
 
 	static void obj_pinMode(void * obj, uint8_t pin, uint8_t mode);
 	static int obj_digitalRead(void * obj, uint8_t pin);

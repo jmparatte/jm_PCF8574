@@ -67,9 +67,11 @@ bool jm_PCF8574::begin(uint8_t i2c_address) // return OK
 	return begin();
 }
 
-void jm_PCF8574::end()
+bool jm_PCF8574::end()
 {
 	_connected = false;
+
+	return true;
 }
 
 // ---------------------------------------------------------------------------
@@ -160,9 +162,11 @@ void jm_PCF8574::digitalWrite(uint8_t pin, uint8_t value)
 
 // ---------------------------------------------------------------------------
 
-void jm_PCF8574::wait(uint16_t us)
+bool jm_PCF8574::wait(uint16_t us)
 {
 	if (us > 100) delayMicroseconds(us - 100);
+
+	return true;
 }
 
 // ---------------------------------------------------------------------------
