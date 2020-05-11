@@ -1,9 +1,9 @@
 
 #include <jm_PCF8574.h>
 
-#include <Wire.h>
+#include <Arduino.h> 			// HIGH, LOW, OUTPUT, INPUT...
 
-#include <Arduino.h> 			// HIGH, LOW,...
+#include <Wire.h>
 
 //------------------------------------------------------------------------------
 
